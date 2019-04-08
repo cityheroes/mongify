@@ -159,7 +159,7 @@ module Mongify
           end
         else
           # no pre_mongified_id, fallback to the upsert method of Mongo
-          db[collection_name].save(row)
+          insert_into(collection_name, row)
         end
       end
 
